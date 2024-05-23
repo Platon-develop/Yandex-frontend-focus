@@ -1,0 +1,26 @@
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
+:root {
+  --accent-color: #FF8DCB;
+  --title-color: #ffc2e6;
+  --button-color: var(--text-color);
+  --text-color: #353430;
+  --background-color: #FFF1F7;
+  --article-heading-color: var(--text-color);
+  --section-heading-color: var(--text-color);
+  --button-border-color-hover: rgba(50, 49, 45, 0.4);
+  --background-image: url('../images/cover-image-light.png');
+  --header-height: clamp(768px, 1792px - 100vw ,1024px);
+  --header-heading-font-size: clamp(120px, 0.5625rem + 14.4531vw, 157px);
+  --header-title-width: clamp(355px, calc((100vw - 40px) / 2), 491px);
+  --section-heading-width: clamp(236px, calc((236 / 768) * 100vw), 315px);
+}
+
+@media (width <= 768px) {
+  :root {
+    --header-height: clamp(668px, 100vw * 1.33 ,1024px);
+    --header-heading-font-size: clamp(116px, 0.5625rem + 14.4531vw, 120px);
+  }
+}
